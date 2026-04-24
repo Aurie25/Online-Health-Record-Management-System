@@ -31,7 +31,7 @@ Traditional disability assessments require patients to go through a separate, le
 - **Backend:** [PHP]
 - **Frontend:** [HTML, CSSS AND JAVASCRIPT]
 - **Database:** [MySQL]
-- **SERVER:** [XAMMP]
+- **SERVER:** [XAMPP]
 
 ## Installation & Setup
 
@@ -42,3 +42,32 @@ git clone https://github.com/Aurie25/Online-Health-Record-Management-System.git
 # Navigate to project folder
 cd Online-Health-Record-Management-System
 
+## Setup Instructions
+
+### Prerequisites
+- [XAMPP](https://www.apachefriends.org/) installed
+- PHP 7.4+ 
+- MySQL 5.7+
+
+### Step 1: Place the project files
+Copy the entire project folder into:
+C:\xampp\htdocs\ (Windows)
+/Applications/XAMPP/htdocs/ (Mac)
+
+
+### Step 2: Set up the database
+
+1. Open **phpMyAdmin** (http://localhost/phpmyadmin)
+2. Click on **SQL** tab
+3. Copy and paste the SQL code from [`database.sql`](database.sql)
+4. Click **Go** to execute
+
+> **📁 The full SQL schema is available in:** `database requirements/database.sql`
+
+### Step 3: Configure database connection
+Update the database credentials in `config.php`:
+```php
+$db_host = "localhost";
+$db_user = "root";
+$db_password = "";
+$db_name = "healthrecord_db";
