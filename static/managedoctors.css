@@ -1,0 +1,230 @@
+/* managedoctors.css */
+:root {
+    --primary-blue: #4299e1;
+    --secondary-orange: #f6ad55;
+    --dark-blue: #2c5282;
+    --dark-orange: #dd6b20;
+    --success-green: #48bb78;
+    --danger-red: #f56565;
+    --light-gray: #f7fafc;
+    --medium-gray: #e2e8f0;
+    --dark-gray: #4a5568;
+    --text-dark: #2d3748;
+    --border-radius: 12px;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* =============================
+   GLOBAL
+============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--light-gray);
+    color: var(--text-dark);
+}
+
+/* =============================
+   MAIN CONTENT
+============================= */
+.main-content {
+    margin-left: 280px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* =============================
+   PAGE HEADER
+============================= */
+.main-content h1 {
+    background: white;
+    padding: 20px 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--primary-blue);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* =============================
+   SUCCESS MESSAGE
+============================= */
+.main-content p[style] {
+    background: #f0fff4;
+    color: #22543d;
+    padding: 15px 20px;
+    border-left: 4px solid var(--success-green);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* =============================
+   FILTER SECTION
+============================= */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+form input,
+form select {
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 10px;
+    font-size: 14px;
+    transition: var(--transition);
+    min-width: 220px;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+form button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-orange));
+    color: white;
+    transition: var(--transition);
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(66, 153, 225, 0.3);
+}
+
+form a {
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--medium-gray);
+    color: var(--dark-gray);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+form a:hover {
+    background: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+/* =============================
+   TABLE STYLING
+============================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+thead {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+th {
+    padding: 16px 15px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--dark-gray);
+    border-bottom: 2px solid var(--medium-gray);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--medium-gray);
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: var(--transition);
+}
+
+tbody tr:hover {
+    background: var(--light-gray);
+    transform: scale(1.01);
+}
+
+/* =============================
+   ACTION LINKS
+============================= */
+td a {
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+td a:first-child {
+    color: var(--primary-blue);
+}
+
+td a:last-child {
+    color: var(--danger-red);
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* =============================
+   EMPTY STATE
+============================= */
+.main-content p:not([style]) {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--dark-gray);
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input,
+    form select,
+    form button,
+    form a {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

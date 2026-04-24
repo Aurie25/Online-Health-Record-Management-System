@@ -1,0 +1,251 @@
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ===============================
+   PAGE LAYOUT
+================================ */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a3d62, #3c6382);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.signup-container {
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 18px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(10, 61, 98, 0.1);
+    width: 100%;
+    max-width: 520px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.signup-container h2 {
+    text-align: center;
+    color: #0a3d62;
+    margin-bottom: 6px;
+    font-size: 26px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+/* ===============================
+   FORM GROUPS
+================================ */
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-group input:focus {
+    border-color: #0a3d62;
+    box-shadow: 0 0 5px rgba(10, 61, 98, 0.3);
+    outline: none;
+}
+
+/* Field Info */
+.field-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* ===============================
+   PASSWORD STRENGTH
+================================ */
+.password-strength {
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.strength-weak { color: #e74c3c; }
+.strength-medium { color: #f39c12; }
+.strength-strong { color: #2ecc71; }
+
+/* ===============================
+   TERMS SECTION
+================================ */
+.form-group.terms {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.form-group.terms input {
+    width: auto;
+}
+
+.form-group.terms a {
+    color: #0a3d62;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-group.terms a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #074072;
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   LOGIN SECTION
+================================ */
+.login-section {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.login-section p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.btn-login {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 2px solid #0a3d62;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #0a3d62;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #0a3d62;
+    color: white;
+}
+
+/* ===============================
+   MESSAGES
+================================ */
+.error {
+    background: #fdecea;
+    color: #c0392b;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.success {
+    background: #eafaf1;
+    color: #27ae60;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+/* ===============================
+   SECURITY NOTE
+================================ */
+.security-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #444;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 30px 25px;
+    }
+}
