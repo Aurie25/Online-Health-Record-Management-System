@@ -71,3 +71,11 @@ $db_host = "localhost";
 $db_user = "root";
 $db_password = "";
 $db_name = "healthrecord_db";
+
+## Quick Start
+
+1. Import `healthrecord_db.sql`
+2. Configure `db.php`
+3. Run:
+http://localhost/apexcare/seed_demo_accounts.php
+4. Log in using one of the demo accounts listed in `DEMO_ACCOUNTS.md`.
